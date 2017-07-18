@@ -4,7 +4,6 @@
 1. 使用 WebApi 进行统一的数据操作、获取和提交
 1. 可以连接 EF 的 SaveChanges 在进行数据修改时进行处理
 1. 默认使用 Redis 处理消息队列
-subscriptions
 
 ## Publish
 ``` c#
@@ -33,7 +32,7 @@ Subscribe // batch message one push
 v2.0
 SubscribePersistence or not // if no client active not push while client well
 ```
-## XType Design
+## XType Desgin
 ``` yml
 XType
     - Created
