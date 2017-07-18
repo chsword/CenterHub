@@ -10,7 +10,7 @@ subscriptions
 ``` c#
 //Register(typeof(Task),Id,ProductId,XType.Modified,Properties);
 //Register(typeof(Task),task,XType.Modified,Properties);
-Publish(entity);
+Publish(entity);// in ef
 ```
 ## Subscribe in Hub 
 
