@@ -1,6 +1,7 @@
 # CenterHub
 1. 使用此 Hub 进行统一的数据修改推送
 2. 使用 WebApi 进行统一的数据操作、获取和提交
+3. 可以连接 EF 的 SaveChanges 在进行数据修改时进行处理
 
 
 ## 方法设计
@@ -20,7 +21,8 @@ RegisterInHub(typeof(Task),
 
 RegisterInHub**Duplicate** // one message one push
 RegisterInHub // batch message one push
-
+```
+```c#
 v2.0
 Persistence or not // if no client active not push while client well
 ```
