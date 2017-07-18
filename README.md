@@ -18,7 +18,7 @@ Publish(entity);
 
 ```C#
 Subscribe(typeof(Task),XType.Created,"clientMethodName");
-(typeof(Task),XType.Modified,"clientMethodName");
+Subscribe(typeof(Task),XType.Modified,"clientMethodName");
 Subscribe(typeof(Task),
                 XType.Modified,
                 "clientMethodName",
