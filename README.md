@@ -41,3 +41,15 @@ XType
     - \\ SpicalPropertyModified
 ```
 
+
+## 问题及解决方案
+1. 如何解决使用字符串调用方法的问题
+``` C#
+var client=((IClientProxy)GlobalHost.ConnectionManager.GetHubContext<TransportHub>()
+                                .Clients.All);
+client.Invoke(method, arg1, arg2);
+```
+2. 如何解决服务器端得知客户端方法的问题
+```
+暂考虑分组问题
+```
