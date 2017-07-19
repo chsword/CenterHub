@@ -5,13 +5,15 @@
 1. 可以连接 EF 的 SaveChanges 在进行数据修改时进行处理
 1. 默认使用 Redis 处理消息队列
 
-## Publish
+## 服务器端实现
+
+### Publish
 ``` c#
 //Register(typeof(Task),Id,ProductId,XType.Modified,Properties);
 //Register(typeof(Task),task,XType.Modified,Properties);
 Publish(entity);// in ef
 ```
-## Subscribe in Hub 
+### Subscribe in Hub 
 
 方法参数
 
@@ -32,7 +34,7 @@ Subscribe // batch message one push
 v2.0
 SubscribePersistence or not // if no client active not push while client well
 ```
-## XType Desgin
+### XType Desgin
 ``` yml
 XType
     - Created
@@ -40,9 +42,12 @@ XType
     - Deleted
     - \\ SpicalPropertyModified
 ```
+## 客户端实现
 
 
-## 问题及解决方案
+
+
+### 问题及解决方案
 1. 如何解决使用字符串调用方法的问题
 ``` C#
 var client=((IClientProxy)GlobalHost.ConnectionManager.GetHubContext<TransportHub>()
