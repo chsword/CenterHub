@@ -38,10 +38,9 @@ Publish(entity);// in ef
                   return x["UserId"]==3;
                 });```
 
-方法种类
-
+- [ ] 区分是否进行批量推送
 - [ ] Register**Duplicate** // one message one push
-- [x] Register // batch message one push
+- [ ] Register // batch message one push
 
 
 v2.0
