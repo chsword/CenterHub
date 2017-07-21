@@ -7,23 +7,30 @@
 
 ## 服务器端实现
 
+### Listener
+处理 Queue 中的信息
+
+
 ### Publish
 ``` c#
-//Register(typeof(Task),Id,ProductId,XType.Modified,Properties);
-//Register(typeof(Task),task,XType.Modified,Properties);
-Publish(entity);// in ef
+//publish info to queue
+//Publish(typeof(Task),Id,ProductId,XType.Modified,Properties);
+//Publish(typeof(Task),task,XType.Modified,Properties);
+Publish(entity);// in ef 
 ```
-### Subscribe in Hub 
+### Register in Hub 
 
 方法参数
 
 ```C#
-Subscribe(typeof(Task),XType.Created,"clientMethodName");
-Subscribe(typeof(Task),XType.Modified,"clientMethodName");
-Subscribe(typeof(Task),
+Register(typeof(Task),XType.Created,"clientMethodName");
+Register(typeof(Task),XType.Modified,"clientMethodName");
+Register(typeof(Task),
                 XType.Modified,
                 "clientMethodName",
-                c=>c.Property1,c=>c.Property2);
+                (x)=>{
+                  return x["UserId"]==3;
+                });
 ```
 方法种类
 ```c#
