@@ -29,9 +29,9 @@ Publish(entity);// in ef
 方法参数
 
 
-- [x] Register(typeof(Task),XType.Created,"clientMethodName");
-- [x] Register(typeof(Task),XType.Modified | XType.Created,"clientMethodName");
-- [x] Register(typeof(Task),XType.Modified,"clientMethodName",(x)=>{return x["UserId"]==3;});
+- [x] Register(typeof(Task), XType.Created, "clientMethodName");
+- [x] Register(typeof(Task), XType.Modified | XType.Created, "clientMethodName");
+- [x] Register(typeof(Task), XType.Modified, "clientMethodName", (d) => d["UserId"].Equals(3));
 
 - [ ] 区分是否进行批量推送
 - [ ] Register**Duplicate** // one message one push
