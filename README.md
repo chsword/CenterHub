@@ -62,7 +62,7 @@ XType
 ### 问题及解决方案
 1. 如何解决使用字符串调用方法的问题
 ``` C#
-var client=((IClientProxy)GlobalHost.ConnectionManager.GetHubContext<TransportHub>()
+var client=((IClientProxy)GlobalHost.ConnectionManager.GetHubContext<CenterHub>()
                                 .Clients.All);
 client.Invoke(method, arg1, arg2);
 ```
